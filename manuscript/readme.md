@@ -23,16 +23,3 @@ HTTP 本该简单，可要是按着协议文本的严格，就容易显得呆板
 
 by 1000copy#gmail.com
 
-
-#目录
-
-- [引入](1.introduction.md)
-- [术语](2.term.md)
-- [实验环境](3.test-suite.md)
-- [一点历史](4.history.md)
-- [请求](5.request/)
-- [响应](6.response/)
-- [消息主体](7.message-body.md)
-- [   连接](8.connection.md)
-- [客户身份识别](9.client-identity.md)
-- [后记 ](10.paperback.md)
