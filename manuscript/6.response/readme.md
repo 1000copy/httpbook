@@ -9,7 +9,7 @@
                    CRLF
                    [ message-body ]          
 
-#状态行（ Status-Line)
+##状态行（ Status-Line)
 
 由HTTP版本、状态码、状态说明共三个字段构成
 	Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
@@ -22,7 +22,7 @@ HTTP版本、状态码则直接影响客户端如何处理此响应消息。状�
 - 5xx: 服务器错误。错误发生了，是服务器的问题，和客户端无关。
 我们也把响应消息按照状态码类别的不同分为6类。其中1xx内的状态码目前只有两个，但是因为它们俩都相对比较复杂，因此拆分为两类，以便说明和理解。
 
-# 消息主体 message-body
+## 消息主体 message-body
 会单独分章说明
 目录
 - [200型响应](1.200.md)
