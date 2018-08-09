@@ -1,26 +1,32 @@
-#HTTP 响应
+# Response Message
 
-服务器执行了客户端请求后，需要给客户端以响应，告知它是否成功，以及可能防止在消息主体内的执行后的结果。
+After the server executes the client request, it needs to respond to the client, telling if it is successful, and possibly preventing request results within the message body.
 
-响应消息构成：
+The response message consists of:
 
-    Response      = Status-Line           
-                   *(header  CRLF)  
-                   CRLF
-                   [ message-body ]          
+	Response = status line
+	*(header CRLF)
+	CRLF
+	[message body]
 
-##状态行（ Status-Line)
+##Status-Line
 
-由HTTP版本、状态码、状态说明共三个字段构成
-	Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
-状态说明就是一个给人类阅读的内容，对于处理逻辑并不重要。
-HTTP版本、状态码则直接影响客户端如何处理此响应消息。状态码就是一个三位的数字，用来告知客户端请求的处理结果。第一个位数是一个分类，指明状态码的类型。以此数字把状态码分为5类：
-- 1xx: 信息类 
-- 2xx: 成功。请求被成功的接受或者理解，或者执行。我们常见的200 OK就是这个分类内的。
-- 3xx: 重定向 - 为完成请求，需要进一步的行动。我们常见的301 Redirect就是这个分类内的。
-- 4xx: 客户端错误。客户端提交的数据错误，不能被理解或者接受等等。我们常见的404 Not Found 就是这个分类内的。
-- 5xx: 服务器错误。错误发生了，是服务器的问题，和客户端无关。
-我们也把响应消息按照状态码类别的不同分为6类。其中1xx内的状态码目前只有两个，但是因为它们俩都相对比较复杂，因此拆分为两类，以便说明和理解。
+It consists of three fields: HTTP version, status code, and status description:
 
-## 消息主体 message-body
-会单独分章说明
+	Status-Line = HTTP-Version SPACE Status-Code SPACE Reason-Phrase CRLF
+
+The state description is a content that is read by humans and is not important for processing logic.
+The HTTP version, the status code directly affects how the client handles this response message. The status code is a three-digit number that is used to inform the client of the result of the request. The first digit is a category that indicates the type of status code. Use this number to divide the status code into five categories:
+
+ - 1xx: Information. 
+ - 2xx: Success. The request is successfully accepted or understood, or executed. Our common `200 OK` is within this category.
+ - 3xx: Redirect - Further action is required to complete the request. Our common `301 Redirect` is within this category.
+ - 4xx: Client error. The data submitted by the client is incorrect and cannot be understood or accepted. Our common `404 Not Found` is within this category.
+ - 5xx: Server error. The error has occurred with the server, regardless of the client.
+
+We also classify response messages into six categories based on the status code category. There are only two status codes in 1xx, but because they are relatively complex, they are split into two categories for explanation and understanding.
+
+## message-body
+
+Will be described lately
+
